@@ -1,0 +1,62 @@
+/*=========================================
+
+	Typography
+
+==========================================*/
+
+html {
+	color: #363245;
+}
+
+a {
+	color: #5900b9;
+}
+
+
+/*========================================
+
+	Header Components
+
+========================================*/
+
+header {
+	background-color: #80009a;
+	padding: 2rem;
+}
+
+header a {
+	color: #dcdbdf;
+	text-decoration: none;
+}
+
+header ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/*========================================
+
+	Footer
+
+=========================================*/
+
+footer {
+	border-top: 1px solid #aaa9ad;
+}
+
+p {
+	font-size: .8rem;
+}
+
+footer nav {
+	font-size: .8rem;
+}
+
+footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+footer a {
+	text-decoration: none;
+}
