@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,600,700|Lato:400,400i,700&display=swap');
 
 /*==========================================
 
@@ -39,21 +39,61 @@ html {
 html {
 	color: var(--color-text-primary);
 	font-family: var(--font-primary);
+	font-size: var(--ratio);
+	
 	--font-primary: Lato, Arial, sans-serif;
 	--font-secondary: Comfortaa, Arial, sans-serif;
 	--font-third: Arial ,sans-serif;
+	--ratio: 1.333;
+	--size-xsmall: calc( 0.6rem * var(--ratio) );
+	--size-small: calc( 0.8rem * var(--ratio) );
+	--size-medium: calc( 1rem * var(--ratio) );
+	--size-large: calc( var(--size-medium) * var(--ratio) );
+	--size-xlarge: calc( var(--size-large) * var(--ratio) );
+	--size-xxlarge: calc( var(--size-xlarge) * var(--ratio) );
+	--margin-standard: 2.5rem auto; 
 }
 
 a {
-	color: var(--color-deepviolet);
+	color: var(--color-deepviolet-dark);
 }
 
-h1, h2 {
+h1 {
+	color: var(--color-salmon);
+	font-size: var(--size-xxlarge);
+	
+}
+
+h2 {
+	color: var(--color-salmon-dark);
+	font-size: var(--size-xlarge);
+	text-decoration: underline;
+}
+
+h3 {
+	color: var(--color-magenta);
+	font-size: var(--size-large);
+}
+
+h4 {
+	color: var(--color-magenta-dark);
+	font-size: var(--size-medium);
+}
+
+h5 {
+	color: var(--color-fucshia);
+	font-size: var(--size-small);
+}
+
+h6 {
+	color: var(--color-fucshia-dark);
+	font-size: var(--size-xsmall);
+}
+
+h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
-}
-
-h3, h4, h5, h6 {
-	font-family: var(--font-third);
+	line-height: 1.1;
+	margin: 1.3rem;
 }
 
 .font-primary {
@@ -66,20 +106,52 @@ h3, h4, h5, h6 {
 	font-size: 1.5rem;
 }
 
-.font-third {
-	font-family: var(--font-third);
+.font-hierarchy {
 	font-size: 1.5rem;
 }
 
 body {
-	line-height: 1.3rem;
+	line-height: 1.5rem;
 }
 
 main {
-	margin: auto;
+	margin: var(--margin-standard);
 	max-width: 37rem;
 }
 
+.featured-text {
+	font-size: var(--size-large);
+	padding: 1.5rem;
+}
+
+.tertiary-ex {
+	font-size: var(--size-xsmall);
+}
+
+ul {
+	list-style-position: inside;
+	list-style-type: circle;
+}
+
+ul ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-position: inside;
+	list-style-type: upper-roman;
+}
+
+ol ol {
+	list-style-type: lower-roman;
+}
+
+blockquote {
+	border-left: 3px dotted var(--color-salmon-light);
+	font-size: var(--size-medium);
+	font-style: italic;
+	padding-left: 1rem;
+}
 /*========================================
 
 	Header Components
@@ -87,9 +159,9 @@ main {
 ========================================*/
 
 header {
-	background-color: var(--color-deepviolet);
-	padding: 2rem;
-	border-bottom: 2px solid var(--color-magenta);
+	background-color: var(--color-deepviolet-light);
+	padding: 1rem 1.5rem;
+	border-bottom: 3px solid var(--color-fucshia);
 }
 
 header a {
@@ -102,9 +174,18 @@ header ul {
 	padding: 0;
 }
 
-.logo {
-	font-family: var(--font-primary);
+header li {
+	border-bottom: 1px solid var(--color-magenta);
+	margin-bottom: 1rem;
 }
+
+.logo {
+	border-bottom: 3px dotted var(--color-salmon);
+	color: var(--color-salmon);
+	font-family: var(--font-secondary);
+	font-size: var(--size-large);
+}
+
 
 /*=======================================
 
@@ -112,13 +193,17 @@ header ul {
 
 =======================================*/
 
+body {
+	background-color: var(--color-silver-light);
+}
+
 body p a {
-	color: var(--color-fucshia-dark);
+	color: var(--color-fucshia);
 	text-decoration: none;
 }
 
 body p a:visited {
-	color: var(--color-deepviolet);
+	color: var(--color-deepviolet-dark);
 }
 
 body p a:hover {
@@ -126,7 +211,7 @@ body p a:hover {
 }
 
 body p a:focus {
-	background-color: var(--color-lavender-dark);
+	background-color: var(--color-lavender);
 	outline: none;
 }
 
@@ -146,11 +231,11 @@ footer {
 }
 
 footer p {
-	font-size: .8rem;
+	font-size: var(--size-xsmall);
 }
 
 footer nav {
-	font-size: .8rem;
+	font-size: var(--size-xsmall);
 }
 
 footer ul {
