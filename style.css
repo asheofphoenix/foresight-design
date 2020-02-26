@@ -10,21 +10,21 @@ html {
 	--color-silver-light: #dcdbdf;
 	--color-silver: #aaa9ad;
 	--color-silver-dark: #7b7a7e;
-	--color-magenta-light: #f34da0;
-	--color-magenta: #ee0077;
-	--color-magenta-dark: #be005f;
-	--color-deepviolet-light: #725e7f;
-	--color-deepviolet: #4f365f;
-	--color-deepviolet-dark: #3f2b4c;
-	--color-fucshia-light: #d133e5;
-	--color-fucshia: #c600df;
-	--color-fucshia-dark: #9e00b2;
-	--color-lavender-light: #d0bef1;
-	--color-lavender: #c4aeee;
-	--color-lavender-dark: #9d8bbe;
-	--color-salmon-light: #fb7a91;
-	--color-salmon: #fa5976;
-	--color-salmon-dark: #c8475e;
+	--color-lavendar-light: #906af2;
+	--color-lavendar: #764ede;
+	--color-lavendar-dark: #6c4ebb;
+	--color-seagreen-light: #8bebeb;
+	--color-seagreen: #54ffff;
+	--color-seagreen-dark: #3bb2b2;
+	--color-mint-light: #c5faeb;
+	--color-mint: #9afadf;
+	--color-mint-dark: #8ee5cc;
+	--color-navy-light: #304791;
+	--color-navy: #1b2e6d;
+	--color-navy-dark: #15234f;
+	--color-deepblue-light: #446ff0;
+	--color-deepblue: #1848d9;
+	--color-deepblue-dark: #1e41ab;
 	--color-text-primary: #363245;
 	--color-text-secondary: #605b70;
 	--color-text-disabled: #918aaa;
@@ -54,39 +54,35 @@ html {
 	--margin-standard: 2.5rem auto; 
 }
 
-a {
-	color: var(--color-deepviolet-dark);
-}
-
 h1 {
-	color: var(--color-salmon);
+	color: var(--color-deepblue-light);
 	font-size: var(--size-xxlarge);
 	
 }
 
 h2 {
-	color: var(--color-salmon-dark);
+	color: var(--color-lavendar);
 	font-size: var(--size-xlarge);
 	text-decoration: underline;
 }
 
 h3 {
-	color: var(--color-magenta);
+	color: var(--color-deepblue);
 	font-size: var(--size-large);
 }
 
 h4 {
-	color: var(--color-magenta-dark);
+	color: var(--color-lavendar-light);
 	font-size: var(--size-medium);
 }
 
 h5 {
-	color: var(--color-fucshia);
+	color: var(--color-deepblue-dark);
 	font-size: var(--size-small);
 }
 
 h6 {
-	color: var(--color-fucshia-dark);
+	color: var(--color-deepblue-dark);
 	font-size: var(--size-xsmall);
 }
 
@@ -147,7 +143,7 @@ ol ol {
 }
 
 blockquote {
-	border-left: 3px dotted var(--color-salmon-light);
+	border-left: 3px dotted var(--color-seagreen-dark);
 	font-size: var(--size-medium);
 	font-style: italic;
 	padding-left: 1rem;
@@ -159,13 +155,13 @@ blockquote {
 ========================================*/
 
 header {
-	background-color: var(--color-deepviolet-light);
+	background-color: var(--color-deepblue);
 	padding: 1rem 1.5rem;
-	border-bottom: 3px solid var(--color-fucshia);
+	border-bottom: 3px solid var(--color-seagreen-dark);
 }
 
 header a {
-	color: var(--color-silver-light);
+	color: var(--color-lavendar-light);
 	text-decoration: none;
 }
 
@@ -175,13 +171,13 @@ header ul {
 }
 
 header li {
-	border-bottom: 1px solid var(--color-magenta);
+	border-bottom: 1px solid var(--color-seagreen);
 	margin-bottom: 1rem;
 }
 
 .logo {
-	border-bottom: 3px dotted var(--color-salmon);
-	color: var(--color-salmon);
+	border-bottom: 3px dotted var(--color-mint);
+	color: var(--color-seagreen);
 	font-family: var(--font-secondary);
 	font-size: var(--size-large);
 }
@@ -197,28 +193,111 @@ body {
 	background-color: var(--color-silver-light);
 }
 
-body p a {
-	color: var(--color-fucshia);
+a {
+	color: var(--color-mint-dark);
 	text-decoration: none;
 }
 
-body p a:visited {
-	color: var(--color-deepviolet-dark);
+a:visited {
+	color: var(--color-lavendar-light);
 }
 
-body p a:hover {
-	color: var(--color-magenta);
+a:hover {
+	color: var(--color-seagreen);
 }
 
-body p a:focus {
-	background-color: var(--color-lavender);
+a:focus {
+	background-color: var(--color-mint);
 	outline: none;
 }
 
-body p a:active {
-	color: var(--color-salmon);
+a:active {
+	color: var(--color-mint-dark);
 	text-decoration: underline;
 }
+
+/*========================================
+
+	Button Components
+
+=========================================*/
+
+.button-hero, .button-hero:visited {
+	background-color: var(--color-seagreen-dark);
+	border-radius: 2rem 0.5rem 2rem 0.5rem;
+	box-shadow: 0.3rem 0.3rem 0.1rem rgba( 0, 0, 0, 0.3);
+	color: var(--color-text-secondary);
+	display: inline-block;
+	font-size: var(--size-large);
+	padding: 2rem 3.5rem;
+}
+
+.button-hero:hover, .button-hero:focus {
+	background-color: var(--color-mint-dark);
+	border-radius: 2rem 0 2rem 0;
+	color: var(--color-silver-dark);
+}
+
+.button-hero:active {
+	background-color: var(--color-mint-light);
+	color: var(--color-silver-dark);
+	text-decoration: none;
+}
+
+.button-normal, .button-normal:visited {
+	background-color: var(--color-deepblue-light);
+	border-radius: 0.8rem;
+	box-shadow: 0.3rem 0.3rem 0.1rem rgba( 0, 0, 0, 0.3);
+	color: var(--color-silver-light);
+	display: inline-block;
+	font-size: var(--size-medium);
+	padding: 1.5rem 3rem;
+}
+
+.button-normal:hover, .button-normal:focus {
+	background-color: var(--color-deepblue-dark);
+	border-radius: 2rem 0.8rem 2rem 0.8rem;
+}
+
+.button-normal:active {
+	background-color: var(--color-navy-dark);
+	border-radius: 0;
+}
+
+.button-tertiary, .button-tertiary:visited {
+	border: 3px solid var(--color-lavendar-light);
+	border-radius: 0.8rem;
+	box-shadow: 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.3);
+	color: var(--color-seagreen-dark);
+	display: inline-block;
+	font-size: var(--size-medium);
+	padding: 1.5rem 2.8rem;
+}
+
+.button-tertiary:hover, .button-tertiary:focus {
+	border: 3px dotted var(--color-seagreen-dark);
+	border-radius: 2rem 0.8rem 2rem 0.8rem;
+	color: var(--color-deepblue);
+}
+
+/*========================================
+
+	Accordion Components
+
+=========================================*/
+
+details {
+	border-bottom: 3px dotted var(--color-seagreen-dark);
+	color: var(--color-deepblue);
+	font-size: var(--size-medium);
+	margin: 1.8rem;
+}
+
+details div {
+	color: var(--color-lavendar-dark);
+	font-size: var(--size-small);
+}
+
 
 /*========================================
 
