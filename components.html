@@ -17,7 +17,7 @@
 		
 		<a href="index.html" class="logo">Foresight</a>
 
-		<nav>
+		<nav class="nav-primary">
 
 			<ul>
 
@@ -41,63 +41,85 @@
 
 		<h2>Link Buttons</h2>
 
+		<figure class="figure-button-position">	
+
 		<h3>Hero Button</h3>
 
-		<figure>
-			
 			<a href="" class="button-hero">Button</a>
 
 		</figure>
 
-		<h3>Normal Button</h3>
+		<figure class="figure-button-position">
 
-		<figure>
+		<h3>Normal Button</h3>
 			
 			<a href="" class="button-normal">Button</a>
 
 		</figure>
 
-		<h3>Tertiary Button</h3>
+		<figure class="figure-button-position">
 
-		<figure>
+		<h3>Tertiary Button</h3>
 			
 			<a href="" class="button-tertiary">Button</a>
 
 		</figure>
 
-		<h2>Accordions</h2>
+		<figure>
 
-		<details>
-			
-			<summary>Accordion</summary>
+			<h2>Accordions</h2>
 
-			<div>
+			<details>
 				
-				<p>A message nested inside the accordion</p>
+				<summary>Accordion</summary>
 
-			</div>
+				<div>
+					
+					<p>A message nested inside the accordion</p>
 
-		</details>
+				</div>
 
-		<details>
+			</details>
+
+			<details>
+				
+				<summary>Another Accordion</summary>
+				
+				<div>
+
+					<p>Another message nested inside</p>
+
+				</div>
+
+			</details>
+
+			<details>
+				
+				<summary>Third Accordion</summary>
+
+				<div>
+
+					<p>More messages nested inside</p>
+
+				</div>
+
+			</details>
+
+		</figure>
+
+		<figure>
+
+			<h2>Modal Dialog</h2>
 			
-			<summary>Another Accordion</summary>
-			
-			<div>
+			<button id="open-modal" type="button">Open Modal</button>
 
-				<p>Another message nested inside</p>
+			<dialog id="modal-demo">
 
-			</div>
+				<h2>Hello There!</h2>
 
-		</details>
+				<p>This is the content area of the modal box</p>
 
-		<details>
-			
-			<summary>Third Accordion</summary>
-
-			<p>More messages nested inside</p>
-
-		</details>
+		</figure>
 
 	</main>
 
@@ -120,7 +142,26 @@
 
 		<p>&copy; Copyright 2020</p>
 
-	</footer>
+	</footer>	
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('open-modal');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
 
 	</body>
 

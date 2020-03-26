@@ -40,6 +40,7 @@ html {
 	color: var(--color-text-primary);
 	font-family: var(--font-primary);
 	font-size: var(--ratio);
+	line-height: 1.5;
 	
 	--font-primary: Lato, Arial, sans-serif;
 	--font-secondary: Comfortaa, Arial, sans-serif;
@@ -89,39 +90,12 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
 	line-height: 1.1;
-	margin: 1.3rem;
-}
-
-.font-primary {
-	font-family: var(--font-primary);
-	font-size: 1.5rem;
-}
-
-.font-second {
-	font-family: var(--font-secondary);
-	font-size: 1.5rem;
-}
-
-.font-hierarchy {
-	font-size: 1.5rem;
-}
-
-body {
-	line-height: 1.5rem;
+	margin: 1.5rem;
 }
 
 main {
 	margin: var(--margin-standard);
 	max-width: 37rem;
-}
-
-.featured-text {
-	font-size: var(--size-large);
-	padding: 1.5rem;
-}
-
-.tertiary-ex {
-	font-size: var(--size-xsmall);
 }
 
 ul {
@@ -182,6 +156,27 @@ header li {
 	font-size: var(--size-large);
 }
 
+.nav-primary a {
+	color: var(--color-seagreen);
+}
+
+.nav-primary a:visited {
+	color: var(--color-lavendar-light);
+}
+
+.nav-primary a:hover {
+	color: var(--color-silver-light);
+}
+
+.nav-primary a:focus {
+	color: var(--color-silver-light);
+	background-color: var(--color-lavendar-dark);
+}
+
+.nav-primary a:active {
+	background-color: var(--color-lavendar-dark);
+}
+
 
 /*=======================================
 
@@ -194,16 +189,16 @@ body {
 }
 
 a {
-	color: var(--color-mint-dark);
+	color: var(--color-navy);
 	text-decoration: none;
 }
 
 a:visited {
-	color: var(--color-lavendar-light);
+	color: var(--color-deepblue-light);
 }
 
 a:hover {
-	color: var(--color-seagreen);
+	color: var(--color-seagreen-dark);
 }
 
 a:focus {
@@ -212,8 +207,29 @@ a:focus {
 }
 
 a:active {
-	color: var(--color-mint-dark);
+	color: var(--color-deepblue-dark);
 	text-decoration: underline;
+}
+
+/*========================================
+
+	Figures
+
+=========================================*/
+
+figure {
+	border: 4px solid var(--color-silver);
+	border-radius: 3rem;
+	margin: 2rem;
+	padding: 2rem .9rem;
+}
+
+figure h3, figure h4 {
+	text-decoration: underline;
+}
+
+.text-underline {
+	text-decoration: none;
 }
 
 /*========================================
@@ -221,6 +237,16 @@ a:active {
 	Button Components
 
 =========================================*/
+
+.figure-button-position {
+	padding-bottom: 2rem;
+	padding-top: .3rem;
+	text-align: center;
+}
+
+.figure-button-position h3 {
+	margin-top: .3rem;
+}
 
 .button-hero, .button-hero:visited {
 	background-color: var(--color-seagreen-dark);
@@ -297,6 +323,92 @@ details div {
 	color: var(--color-lavendar-dark);
 	font-size: var(--size-small);
 }
+
+/*=========================================
+
+	Examples
+
+=========================================*/
+
+.font-primary {
+	font-family: var(--font-primary);
+	font-size: 1.5rem;
+}
+
+.font-second {
+	font-family: var(--font-secondary);
+	font-size: 1.5rem;
+}
+
+.font-hierarchy {
+	font-size: 1.5rem;
+}
+
+.featured-text {
+	font-size: var(--size-large);
+	line-height: 1.2;
+	padding: 1.5rem;
+}
+
+.tertiary-example {
+	font-size: var(--size-xsmall);
+}
+
+/*========================================
+
+	Dialog Components
+
+=========================================*/
+
+dialog {
+	animation: slide-in-jump 1.2s ease;
+	background-color: var(--color-mint-dark);
+	border-radius: 2rem;
+	box-shadow: 0.3rem 0.3rem 0.1rem rgba( 0, 0, 0, 0.3);
+	color: var(--color-navy-dark);
+	font-size: 1.1rem;
+}
+
+dialog::backdrop {
+	animation: opacity-to 1s ease-out; 
+	background-color: rgba(68, 111, 240, .3);
+}
+
+@keyframes slide-in-jump {
+
+	0% {
+		transform: translateY(-10rem) scale(.3);
+	}
+
+	50% {
+		transform: translateY(0rem) scale(1);
+	}
+
+	80% {
+		transform: translateY(-5rem) scale(1.5);
+	}
+
+	100% {
+		transform: translateY(0) scale(1);
+	}
+
+}
+
+@keyframes opacity-to {
+
+	0% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: .3;
+	}
+
+	100% {
+		opacity: .5;
+	}
+}
+
 
 
 /*========================================
