@@ -416,6 +416,7 @@ dialog::backdrop {
 
 =========================================*/
 
+
 label, input,select, textarea {
 	display: block;
 	margin: 0 auto;
@@ -443,6 +444,17 @@ input:focus, textarea:focus, select:focus {
 .error {
 	border-color: #bf1313;
 }
+
+	/*=============================================
+			Submit Button Components
+		
+	==============================================*/
+
+button:hover, button:focus {
+	background-color: var(--color-lavendar-dark);
+	box-shadow: 0.3rem 0.3rem 0.1rem rgba( 0, 0, 0, 0.3);
+}
+
 /*========================================
 
 	Footer Components
