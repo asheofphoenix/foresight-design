@@ -41,7 +41,7 @@
 
 		<h2>Link Buttons</h2>
 
-		<figure class="figure-button-position">	
+		<figure class="figure-position">	
 
 			<h3>Hero Button</h3>
 
@@ -49,7 +49,7 @@
 
 		</figure>
 
-		<figure class="figure-button-position">
+		<figure class="figure-position">
 
 			<h3>Normal Button</h3>
 			
@@ -57,7 +57,7 @@
 
 		</figure>
 
-		<figure class="figure-button-position">
+		<figure class="figure-position">
 
 			<h3>Tertiary Button</h3>
 			
@@ -111,7 +111,7 @@
 
 		<h2>Modal Dialog</h2>
 
-		<figure>
+		<figure class="figure-position">
 
 			<div>
 			
@@ -131,22 +131,35 @@
 
 		<h2>Form Components</h2>
 
-		<figure>
+		<figure class="form-position">
 			
 			<h3>Text Form</h3>
-
-			<form action=""></form>
 
 			<div>
 
 				<label for="user-name">Text Form</label>
-				<input type="text" id="user-name" name="name" disabled value=" John Smith" class="error">
+				<input type="text" id="user-name" name="name">
+				<p class="hint-text">this is some hint text</p>
+			</div>			
+
+			<div>
+
+				<label for="user-name">Text Form</label>
+				<input type="text" id="user-name" name="name" class="error">
+				<p class="error-text">Ope, seems something went wrong!</p>
+
+			</div>
+
+			<div>
+
+				<label for="user-name">Text Form</label>
+				<input type="text" id="user-name" name="name" disabled value="Disabled" class="disabled">
 
 			</div>
 
 		</figure>
 
-		<figure>
+		<figure class="form-position">
 			
 			<h3>Text Area</h3>
 
@@ -162,7 +175,7 @@
 
 		</figure>
 
-		<figure>
+		<figure class="form-position">
 			
 			<h3>Select</h3>
 
@@ -181,13 +194,59 @@
 
 		</figure>
 
-		<figure>
+		<figure class="form-position">
 			
 			<h3>Submit / Button</h3>
 
 			<button type="submit">Submit</button>
 
 		</figure>
+
+		<h2>Navigation</h2>
+
+		<figure>
+			
+			<h3>Primary Navigation</h3>
+
+				<nav class="component-nav-primary">
+
+					<ul>
+
+						<li><a href="index.html">Home</a></li>
+
+						<li><a href="style.html">Style</a></li>
+
+						<li><a href="components.html">Components</a></li>
+
+						<li><a href="layouts.html">Layout</a></li>
+
+					</ul>
+
+				</nav>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Secondary Navigation</h3>
+
+			<nav class="nav-secondary">
+				
+				<ul>
+					
+					<li><a href="index.html">Item 1</a></li>
+
+					<li><a href="index.html">Item 2</a></li>
+
+					<li><a href="index.html">Item 3</a></li>
+
+				</ul>
+
+			</nav>
+
+		</figure>
+
+
 
 	</main>
 
@@ -196,7 +255,7 @@
 		<p>Foresight Design System created by Ashlie Weitting</p>
 		<p>Ashlie Weitting has been working in design for several years and building websites only recently. Combining the two skills has been just the challenge Ashlie has been looking forward to.</p>
 
-		<nav>
+		<nav class="nav-secondary">
 			<ul>
 				<li><a href="https://www.linkedin.com/in/ashlie-weitting-rubio/">Linked In</a></li>
 
