@@ -28,6 +28,10 @@ html {
 	--color-text-primary: #363245;
 	--color-text-secondary: #605b70;
 	--color-text-disabled: #918aaa;
+	--color-red-error: #bf1313;
+	--color-orange-warning: #d95a0b;
+	--color-green-success: #17bf57;
+	--color-blue-neutral: #0fa3f2;
 }
 
 /*=========================================
@@ -454,7 +458,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .error {
-	border-color: #bf1313;
+	border-color: var(--color-red-error);
 }
 
 .hint-text {
@@ -462,7 +466,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .error-text {
-	color: #bf1313;
+	color: var(--color-red-error);
 	font-size: var(--size-xxsmall);
 
 }
@@ -519,7 +523,7 @@ button:hover, button:focus {
 	color: var(--color-lavendar-light);
 }
 
-.component-nav-primary a:hover {
+.component-nav-primary a:hover, .nav-primary a:hover {
 	animation: flicker 1.3s ease-in;
 	color: var(--color-silver-light);
 	font-size: var(--size-large);
@@ -566,6 +570,140 @@ button:hover, button:focus {
 	margin-bottom: 1rem;
 }
 
+/*========================================
+
+     Hero Block
+
+=========================================*/
+
+.notification-error{
+	align-items: center;
+	background-color: var(--color-red-error);
+	border: 3px solid #fff;
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	max-height: 8rem;
+	max-width: 20rem;
+	padding: 1rem 2rem;
+}
+
+.notification-error-text {
+	color: #fff;
+	padding: 1rem;
+}
+
+.notification-error-icon {
+	border-right: 2px dotted #fff;
+	padding: 1rem;
+}
+
+.notification-warning{
+	align-items: center;
+	background-color: var(--color-orange-warning);
+	border: 3px solid #fff;
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem;
+	max-height: 8rem;
+	max-width: 20rem;
+	padding: 1rem 2rem;
+}
+
+.notification-warning-text {
+	color: #fff;
+	padding: 1rem;
+}
+
+.notification-warning-icon {
+	border-right: 2px dotted #fff;
+	padding: 1rem;
+}
+
+.notification-success{
+	align-items: center;
+	background-color: var(--color-green-success);
+	border: 3px solid #fff;
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem;
+	max-height: 8rem;
+	max-width: 20rem;
+	padding: 1rem 2rem;
+}
+
+.notification-success-text {
+	color: #fff;
+	padding: 1rem;
+}
+
+.notification-success-icon {
+	border-right: 2px dotted #fff;
+	padding: 1rem;
+}
+
+.notification-neutral{
+	align-items: center;
+	background-color: var(--color-blue-neutral);
+	border: 3px solid #fff;
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem;
+	max-height: 8rem;
+	max-width: 20rem;
+	padding: 1rem 2rem;
+}
+
+.notification-neutral-text {
+	color: #fff;
+	padding: 1rem;
+}
+
+.notification-neutral-icon {
+	border-right: 2px dotted #fff;
+	padding: 1rem;
+}
+
+
+/*========================================
+
+     Hero Block
+
+=========================================*/
+
+.hero-block {
+	align-items: flex-start;
+	background-image: url('images/hero-img.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
+	width: 95vw;
+}
+
+.hero-text {
+	background: rgba(220, 219, 223, .5);
+}
+
+.hero-block p, .hero-block h2 {
+	display: inline-block;
+	margin: 1rem;
+}
+
+/*================================
+			Hero Block Component
+		
+	=================================*/
+
+.hero-block-fig img{
+	max-width: 100%;
+}
 
 /*========================================
 
@@ -629,7 +767,16 @@ button:hover, button:focus {
 	}
 }
 
+/*================================
+		Hero Block Media Querues
+		
+	=================================*/
 
+@media (min-width: 740px) {
+	.hero-block-example {
+		width: 98vw;
+	}
+}
 
 /*========================================
 

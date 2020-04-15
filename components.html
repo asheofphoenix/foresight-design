@@ -173,6 +173,32 @@
 
 			</div>
 
+
+			<div>
+				
+				<label for="user-message">Message</label>
+
+				<p class="helper-text">Max 100 words</p>
+
+				<textarea id="message" placeholder="Please type your message here" class="error"></textarea>
+
+				<p class="error-text">Ope, seems something went wrong!</p>
+
+			</div>
+
+
+			<div>
+				
+				<label for="user-message">Message</label>
+
+				<p class="helper-text">Max 100 words</p>
+
+				<textarea id="message" placeholder="Please type your message here" disabled value="Disabled" class="disabled"></textarea>
+
+			</div>
+
+
+
 		</figure>
 
 		<figure class="form-position">
@@ -183,6 +209,34 @@
 			
 			<select id="user-choose" name="choose">
 				<option value="" disabled selected hidden>Select</option>
+
+				<option>Choice 1</option>
+				
+				<option>Choice 2</option>
+				
+				<option>Choice 3</option>
+			
+			</select>
+
+			<label for="user-choose">Choose Option</label>
+			
+			<select id="user-choose" name="choose" class="error">
+				<option value="" disabled selected hidden>Select</option>
+
+				<option>Choice 1</option>
+				
+				<option>Choice 2</option>
+				
+				<option>Choice 3</option>
+			
+			</select>
+
+			<p class="error-text">Ope, seems something went wrong!</p>
+
+			<label for="user-choose">Choose Option</label>
+			
+			<select id="user-choose" name="choose">
+				<option value="" disabled selected hidden disabled value="Disabled" class="disabled">Select</option>
 
 				<option>Choice 1</option>
 				
@@ -243,6 +297,84 @@
 				</ul>
 
 			</nav>
+
+		</figure>
+
+		<h2>Notifications</h2>
+
+		<figure>
+			
+			<h3>Error Notification</h3>
+
+			<div class="notification-error">
+
+				<div class="notification-error-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+				</div>
+
+				<div class="notification-error-text">Something somewhere went terribly wrong!</div>
+			
+			</div>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Warning Notification</h3>
+
+			<div class="notification-warning">
+
+				<div class="notification-warning-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+				</div>
+
+				<div class="notification-warning-text">Whoa, watch out!</div>
+			
+			</div>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Successful Notification</h3>
+
+			<div class="notification-success">
+
+				<div class="notification-success-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+				</div>
+
+				<div class="notification-success-text">Alright! You did the thing!</div>
+			
+			</div>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Neutral Notification</h3>
+
+			<div class="notification-neutral">
+
+				<div class="notification-neutral-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+				</div>
+
+				<div class="notification-neutral-text">Hey, we just wanted you to know something.</div>
+			
+			</div>
+
+		</figure>
+
+		<h2>Hero Block Example</h2>
+
+		<figure>
+			
+			<div class="hero-block-fig">
+
+			<a href="hero-block.html"><img src="images/hero-block-example.jpg" alt="hero block"></a>
+
+			</div>
 
 		</figure>
 
