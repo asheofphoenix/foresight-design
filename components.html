@@ -131,41 +131,30 @@
 
 		<h2>Form Components</h2>
 
-		<figure class="form-position">
+		<figure class="form-direction">
 			
 			<h3>Text Form</h3>
-
-			<div>
 
 				<label for="user-name">Text Form</label>
 				<input type="text" id="user-name" name="name">
 				<p class="hint-text">this is some hint text</p>
-			</div>			
-
-			<div>
 
 				<label for="user-name">Text Form</label>
 				<input type="text" id="user-name" name="name" class="error">
 				<p class="error-text">Ope, seems something went wrong!</p>
 
-			</div>
-
-			<div>
-
 				<label for="user-name">Text Form</label>
-				<input type="text" id="user-name" name="name" disabled value="Disabled" class="disabled">
-
-			</div>
+				<input type="text" id="user-name" name="name" disabled value="disabled" >
 
 		</figure>
 
-		<figure class="form-position">
+		<figure class="form-direction">
 			
 			<h3>Text Area</h3>
 
 			<div>
 				
-				<label for="user-message">Message</label>
+				<label for="message">Message</label>
 
 				<p class="helper-text">Max 100 words</p>
 
@@ -176,7 +165,7 @@
 
 			<div>
 				
-				<label for="user-message">Message</label>
+				<label for="message">Message</label>
 
 				<p class="helper-text">Max 100 words</p>
 
@@ -189,11 +178,11 @@
 
 			<div>
 				
-				<label for="user-message">Message</label>
+				<label for="message">Message</label>
 
 				<p class="helper-text">Max 100 words</p>
 
-				<textarea id="message" placeholder="Please type your message here" disabled value="Disabled" class="disabled"></textarea>
+				<textarea id="message" placeholder="Please type your message here" disabled value="disabled"></textarea>
 
 			</div>
 
@@ -201,7 +190,7 @@
 
 		</figure>
 
-		<figure class="form-position">
+		<figure class="form-direction">
 			
 			<h3>Select</h3>
 
@@ -221,7 +210,7 @@
 			<label for="user-choose">Choose Option</label>
 			
 			<select id="user-choose" name="choose" class="error">
-				<option value="" disabled selected hidden>Select</option>
+				<option disabled selected hidden>Select</option>
 
 				<option>Choice 1</option>
 				
@@ -236,7 +225,7 @@
 			<label for="user-choose">Choose Option</label>
 			
 			<select id="user-choose" name="choose">
-				<option value="" disabled selected hidden disabled value="Disabled" class="disabled">Select</option>
+				<option value="" disabled selected hidden disabled value="disabled" >Select</option>
 
 				<option>Choice 1</option>
 				
@@ -248,7 +237,7 @@
 
 		</figure>
 
-		<figure class="form-position">
+		<figure class="form-direction">
 			
 			<h3>Submit / Button</h3>
 
@@ -262,21 +251,23 @@
 			
 			<h3>Primary Navigation</h3>
 
-				<nav class="component-nav-primary">
+				<header>
 
-					<ul>
+			<ul>
 
-						<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 
-						<li><a href="style.html">Style</a></li>
+				<li><a href="style.html">Style</a></li>
 
-						<li><a href="components.html">Components</a></li>
+				<li><a href="components.html">Components</a></li>
 
-						<li><a href="layouts.html">Layout</a></li>
+				<li><a href="layouts.html">Layout</a></li>
 
-					</ul>
+			</ul>
 
-				</nav>
+		</nav>
+
+	</header>
 
 		</figure>
 
@@ -291,6 +282,14 @@
 					<li><a href="index.html">Item 1</a></li>
 
 					<li><a href="index.html">Item 2</a></li>
+
+						<ul class="sub-level">
+						
+							<li><a href="index">sub-item</a></li>
+
+							<li><a href="index">sub-item</a>
+
+						</ul>
 
 					<li><a href="index.html">Item 3</a></li>
 
@@ -375,6 +374,64 @@
 			<a href="hero-block.html"><img src="images/hero-block-example.jpg" alt="hero block"></a>
 
 			</div>
+
+		</figure>
+
+		<h2>Information Card</h2>
+
+		<figure>
+
+			<h3>Article / Post</h3>
+
+			<a href="google.com"><section class="article-post-card">
+
+				<img src="images/article-post.jpg" alt="holding tablet while viewing map" class="article-post-img">
+				
+				<div>
+					
+					<h3>Article / Post Title</h3>
+
+					<p>This is some sample text that would give a preview of what the article or post is going to be about.</p>
+
+					<p class="tertiary-example">Published 4-15-20</p>
+
+				</div>
+
+			</section></a>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Person / Profile</h3>
+
+			<section class="personal-profile">
+				
+				<img src="images/headshot.png" alt="personal profile headshot" class="profile-picture">
+
+				<h3>Jane Smith</h3>
+
+				<p>emailaddress@emaildomain.com</p>
+
+				<p>555-555-5555</p>
+
+			</section>
+
+		</figure>
+
+		<figure>
+			
+			<h3>Call to Action</h3>
+
+			<section class="call-to-action-card">
+
+				<h3>Loyality Should Always be Rewarded!</h3>
+
+				<p>Join our rewards program and start saving 10% on purchases, gain access to exclusive releases, and be the first to see what we're up to.</p>
+
+				<a href="" class="button-tertiary">Button</a>
+
+			</section>
 
 		</figure>
 

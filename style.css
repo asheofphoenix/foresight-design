@@ -28,10 +28,11 @@ html {
 	--color-text-primary: #363245;
 	--color-text-secondary: #605b70;
 	--color-text-disabled: #918aaa;
-	--color-red-error: #bf1313;
-	--color-orange-warning: #d95a0b;
-	--color-green-success: #17bf57;
-	--color-blue-neutral: #0fa3f2;
+	--color-red-error: #b33c27;
+	--color-orange-warning: #e3612d;
+	--color-green-success: #56d168;
+	--color-blue-neutral: #2b93b3;
+	--color-accent-white: #ffffff;
 }
 
 /*=========================================
@@ -58,6 +59,18 @@ html {
 	--size-xlarge: calc( var(--size-large) * var(--ratio) );
 	--size-xxlarge: calc( var(--size-xlarge) * var(--ratio) );
 	--margin-standard: 2.5rem auto; 
+}
+
+	/*================================
+			HTML Media Querues
+		
+	=================================*/
+
+
+@media ( min-width: 800px) {
+	html {
+		font-size: 1.2rem;
+	}
 }
 
 h1 {
@@ -135,8 +148,8 @@ blockquote {
 
 header {
 	background-color: var(--color-deepblue);
-	padding: 1rem 1.5rem;
 	border-bottom: 3px solid var(--color-seagreen-dark);
+	padding: 1rem 1.5rem;
 }
 
 header a {
@@ -170,6 +183,7 @@ header li {
 }
 
 .nav-primary a:hover {
+	animation: flicker 1.3s ease-in;
 	color: var(--color-silver-light);
 }
 
@@ -318,10 +332,10 @@ details div {
 
 =========================================*/
 
-.form-position {
+.form-direction {
 	align-items: center;
-	flex-direction: column;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 }
 
@@ -445,8 +459,8 @@ label, input,select, textarea {
 
 textarea {
 	border-radius: 0 0 .5rem .5rem;
-	min-width: 15rem;
 	min-height: 15rem;
+	min-width: 15rem;
 }
 
 .helper-text {
@@ -471,7 +485,7 @@ input:focus, textarea:focus, select:focus {
 
 }
 
-.disabled {
+[disabled] {
 	background-color: var(--color-text-disabled);
 	color: var(--color-text-primary);
 }
@@ -490,58 +504,40 @@ button:hover, button:focus {
 
 /*========================================
 
-	Navigation Components
+	Secccondary Navigation Components
 
-=========================================*/
+=========================================*/ 
 
-.component-nav-primary {
-	background-color: var(--color-deepblue);
-	padding: 1rem 1.5rem;
-	border-bottom: 3px solid var(--color-seagreen-dark);
-}
-
-.component-nav-primary a, .nav-secondary a {
+.nav-secondary a {
 	color: var(--color-lavendar-light);
 	text-decoration: none;
 }
 
-.component-nav-primary ul, .nav-secondary ul {
+.nav-secondary ul {
 	list-style-type: none;
 	padding: 0;
 }
 
-.component-nav-primary li {
-	border-bottom: 1px solid var(--color-seagreen);
-	margin-bottom: 1rem;
-}
-
-.component-nav-primary a, .nav-secondary a{
+.nav-secondary a{
 	color: var(--color-seagreen);
 }
 
-.component-nav-primary a:visited, .nav-secondary a:visited {
+.nav-secondary a:visited {
 	color: var(--color-lavendar-light);
 }
 
-.component-nav-primary a:hover, .nav-primary a:hover {
-	animation: flicker 1.3s ease-in;
-	color: var(--color-silver-light);
-	font-size: var(--size-large);
-}
-
-.component-nav-primary a:focus, .nav-secondary a:focus {
-	color: var(--color-silver-light);
+.nav-secondary a:focus {
 	background-color: var(--color-lavendar-dark);
+	color: var(--color-silver-light);
 }
 
-.component-nav-primary a:active, .nav-secondary a:active {
+.nav-secondary a:active {
 	background-color: var(--color-lavendar-dark);
 }
 
 .nav-secondary a:hover {
 	animation: flicker 1.3s ease-in;
 	color: var(--color-deepblue-light);
-	font-size: var(--size-medium);
 }
 
 @keyframes flicker {
@@ -566,13 +562,53 @@ button:hover, button:focus {
 	}
 }
 
-.nav-secondary li {
+.nav-secondary {
+	font-size: var(--size-xxsmall);
+}
+
+.nav-secondary li, .sub-level li{ 
 	margin-bottom: 1rem;
+}
+
+.nav-secondary ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+	/*================================
+		Nav Media Querues
+		
+	=================================*/
+
+@media ( min-width: 980px ) {
+	header, .component-nav-primary {
+		border-bottom: 8px solid var(--color-seagreen-dark);
+	}
+
+	.nav-primary li, .component-nav-primary li {
+		border-bottom: none;
+		border-top: 3px solid var(--color-seagreen-dark);
+		border-radius: .5rem;
+		border-left: 3px solid var(--color-seagreen);
+		display: inline-block;
+		padding: 1rem;
+	}
+
+	.nav-primary ul, .component-nav-primary ul {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 0;
+	}
+
+	.logo {
+		font-size: var(--size-xlarge);
+	}
 }
 
 /*========================================
 
-     Hero Block
+     Notification Components
 
 =========================================*/
 
@@ -583,8 +619,9 @@ button:hover, button:focus {
 	border-radius: 1.5rem;
 	display: flex;
 	justify-content: space-evenly;
-	max-height: 8rem;
-	max-width: 20rem;
+	margin: 3rem;
+	min-height: 8rem;
+	min-width: 10rem;
 	padding: 1rem 2rem;
 }
 
@@ -606,8 +643,8 @@ button:hover, button:focus {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 3rem;
-	max-height: 8rem;
-	max-width: 20rem;
+	min-height: 8rem;
+	min-width: 10rem;
 	padding: 1rem 2rem;
 }
 
@@ -629,8 +666,8 @@ button:hover, button:focus {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 3rem;
-	max-height: 8rem;
-	max-width: 20rem;
+	min-height: 8rem;
+	min-width: 10rem;
 	padding: 1rem 2rem;
 }
 
@@ -652,8 +689,8 @@ button:hover, button:focus {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 3rem;
-	max-height: 8rem;
-	max-width: 20rem;
+	min-height: 8rem;
+	min-width: 10rem;
 	padding: 1rem 2rem;
 }
 
@@ -705,68 +742,6 @@ button:hover, button:focus {
 	max-width: 100%;
 }
 
-/*========================================
-
-	Media Queries
-
-=========================================*/
-
-	/*================================
-			HTML Media Querues
-		
-	=================================*/
-
-
-@media ( min-width: 800px) {
-	html {
-		font-size: 1.2rem;
-	}
-}
-	/*================================
-		Nav Media Querues
-		
-	=================================*/
-
-@media ( min-width: 980px ) {
-	header, .component-nav-primary {
-		border-bottom: 8px solid var(--color-seagreen-dark);
-	}
-
-	.nav-primary li, .component-nav-primary li {
-		border-bottom: none;
-		border-top: 3px solid var(--color-seagreen-dark);
-		border-radius: .5rem;
-		border-left: 3px solid var(--color-seagreen);
-		display: inline-block;
-		padding: 1rem;
-	}
-
-	.nav-primary ul, .component-nav-primary ul {
-		align-items: flex-end;
-		display: flex;
-		justify-content: space-around;
-		margin-bottom: 0;
-	}
-
-	.logo {
-		font-size: var(--size-xlarge);
-	}
-
-	.nav-secondary ul {
-		display: flex;
-		justify-content: space-around;
-		padding: 1rem;
-	}
-
-	.nav-secondary li {
-		border-bottom: 3px solid var(--color-silver-dark);
-		border-left: 3px solid var(--color-silver);
-		border-radius: .5rem;
-		display: inline-block;
-		padding: .5rem;
-	}
-}
-
 /*================================
 		Hero Block Media Querues
 		
@@ -778,6 +753,70 @@ button:hover, button:focus {
 	}
 }
 
+/*========================================
+
+	Card Components
+
+=========================================*/
+
+.article-post-img, .profile-picture {
+	border-radius: 2rem;
+	display: block;
+	max-width: 100%;
+}
+
+.article-post-card, .personal-profile, .call-to-action-card {
+	align-items: center;
+	border: 3px solid #fff;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	max-width: 80%;
+	padding: 1rem;
+}
+
+.article-post-card {
+	background-color: var(--color-seagreen-light);
+}
+
+section.article-post-card:hover {
+	animation: shake .80s ease;
+}
+
+@keyframes shake{
+	0% { 
+		transform: rotate(0deg);
+	 }
+
+	60% { 
+		transform: rotate(-3deg);
+	 }
+
+	85% { 
+		transform: rotate(4deg);
+	 }
+
+	95% {
+		transform: rotate(-3deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.personal-profile {
+	background-color: var(--color-mint);
+}
+
+.call-to-action-card {
+	background-color: var(--color-mint-light);
+}
+
+.call-to-action-card h3 {
+	text-decoration: none;
+}
 /*========================================
 
 	Footer Components
@@ -792,13 +831,8 @@ footer p {
 	font-size: var(--size-xxsmall);
 }
 
-footer nav {
+.nav-secondary {
 	font-size: var(--size-xxsmall);
-}
-
-footer ul {
-	list-style-type: none;
-	padding: 0;
 }
 
 footer a {
