@@ -23,8 +23,8 @@ html {
 	--color-text-primary: #363245;
 	--color-text-secondary: #605b70;
 	--color-text-disabled: #918aaa;
-	--color-red-error: #ad1834;
-	--color-orange-warning: #c73e14;
+	--color-red-error: #db1818;
+	--color-orange-warning: #e69215;
 	--color-green-success: #19a86f;
 	--color-blue-neutral: #2b93b3;
 	--color-accent-white: #ffffff;
@@ -609,6 +609,11 @@ button:hover, button:focus {
 	.logo {
 		font-size: var(--size-xlarge);
 	}
+
+	header {
+		margin: auto;
+		max-width: 80%
+	}
 }
 
 /*========================================
@@ -617,98 +622,44 @@ button:hover, button:focus {
 
 =========================================*/
 
-.notification-error{
+
+.notification-icon {
+	border-right: 2px dotted #fff;
+	padding: 1rem;
+}
+
+.notification-error, .notification-warning, .notification-success, .notification-neutral {
 	align-items: center;
+	border: 3px solid #fff;
+	border-radius: 1.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem;
+	min-height: 8rem;
+	min-width: 10rem;
+	padding: 1rem 2rem;
+}
+
+.notification-error {
 	background-color: var(--color-red-error);
-	border: 3px solid #fff;
-	border-radius: 1.5rem;
-	display: flex;
-	justify-content: space-evenly;
-	margin: 3rem;
-	min-height: 8rem;
-	min-width: 10rem;
-	padding: 1rem 2rem;
 }
 
-.notification-error-text {
-	color: #fff;
-	padding: 1rem;
-}
-
-.notification-error-icon {
-	border-right: 2px dotted #fff;
-	padding: 1rem;
-}
-
-.notification-warning{
-	align-items: center;
+.notification-warning {
 	background-color: var(--color-orange-warning);
-	border: 3px solid #fff;
-	border-radius: 1.5rem;
-	display: flex;
-	justify-content: space-evenly;
-	margin: 3rem;
-	min-height: 8rem;
-	min-width: 10rem;
-	padding: 1rem 2rem;
-}
-
-.notification-warning-text {
-	color: #fff;
-	padding: 1rem;
-}
-
-.notification-warning-icon {
-	border-right: 2px dotted #fff;
-	padding: 1rem;
 }
 
 .notification-success{
-	align-items: center;
 	background-color: var(--color-green-success);
-	border: 3px solid #fff;
-	border-radius: 1.5rem;
-	display: flex;
-	justify-content: space-evenly;
-	margin: 3rem;
-	min-height: 8rem;
-	min-width: 10rem;
-	padding: 1rem 2rem;
-}
-
-.notification-success-text {
-	color: #fff;
-	padding: 1rem;
-}
-
-.notification-success-icon {
-	border-right: 2px dotted #fff;
-	padding: 1rem;
 }
 
 .notification-neutral{
-	align-items: center;
 	background-color: var(--color-blue-neutral);
-	border: 3px solid #fff;
-	border-radius: 1.5rem;
-	display: flex;
-	justify-content: space-evenly;
-	margin: 3rem;
-	min-height: 8rem;
-	min-width: 10rem;
-	padding: 1rem 2rem;
 }
 
-.notification-neutral-text {
+.notification-text {
 	color: #fff;
 	padding: 1rem;
 }
-
-.notification-neutral-icon {
-	border-right: 2px dotted #fff;
-	padding: 1rem;
-}
-
 
 /*========================================
 
@@ -765,9 +716,6 @@ button:hover, button:focus {
 	align-items: center;
 	border: 3px solid #fff;
 	border-radius: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
 	padding: 1rem;
 }
 
